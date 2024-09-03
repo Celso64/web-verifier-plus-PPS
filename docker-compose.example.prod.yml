@@ -27,7 +27,7 @@ services:
       start_period: 30s
       timeout: 80s
     ports:
-      - "3000:3000"
+      - "3011:3000"
     labels:
       autoheal: true
   autoheal:
@@ -66,4 +66,3 @@ services:
       - ./html:/usr/share/nginx/html
     depends_on:
       - "nginx-proxy"
-
