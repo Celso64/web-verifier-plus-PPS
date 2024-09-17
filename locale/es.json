@@ -1,0 +1,22 @@
+{
+  "titulo": "Verificador UNRN - Pagina Principal",
+  "introduccion": [
+    "VerifierPlus permite a los usuarios verificar cualquier ",
+    "soportado",
+    "credencial academica digital. Este sitio es hosteado por la ",
+    "Universidad Nacional de Rio Negro",
+    ", una universidad, nacional, que queda en Rio Negro.",
+    "¿Porque deberia confiar en nosotros? Porque, no hay porque"
+  ],
+  "boton_scan": "Escanear Codigo QR",
+  "qr_invalido": "Codigo QR Invalido",
+  "input_label": "Pegar JSON o URL",
+  "boton_verificar": "Verificar",
+  "advertencia": "Advertencia",
+  "JSON_no_parsed": "JSON no puede ser parseado",
+  "drag_drop": [
+    "Arrastra y suelta un archivo aqui o ",
+    "Buscar en los archivos",
+    "Soporta JSON"
+  ]
+}

@@ -1,9 +1,11 @@
 version: "3.7"
-
+# Los valores como ${DB_USER} se leen del .env
 services:
   web-verifier-plus:
     container_name: web-verifier-plus
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     environment:
       - HEALTH_CHECK_SMTP_HOST=add your email host, like smtp.sendgrid.net
       - HEALTH_CHECK_SMTP_USER=
@@ -14,9 +16,9 @@ services:
       - HEALTH_CHECK_WEB_HOOK=a webhook like those of Slack
       - HEALTH_CHECK_SERVICE_URL=http://localhost:3000/api/healthz - the healthz endpoint
       - HEALTH_CHECK_SERVICE_NAME=VERIFIER-PLUS
-      - DB_USER=your mongo user
-      - DB_PASS=and mongo password
-      - DB_HOST=and mongo host
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_HOST=${DB_HOST}
     healthcheck:
       test: ["CMD", "node", "healthcheck.mjs"]
       interval: 30m
@@ -37,3 +39,21 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASS}
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 3015:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${DB_USER}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${DB_PASS}
+      ME_CONFIG_MONGODB_URL: mongodb://${DB_USER}:${DB_PASS}@mongo:27017/
+      ME_CONFIG_BASICAUTH: "false"

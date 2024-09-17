@@ -1,0 +1,18 @@
+{
+  "titulo": "VerifierPlus Home page",
+  "introduccion": [
+    "VerifierPlus allows users to verify any ",
+    "supported",
+    "digital academic credential. This site is hosted by the ",
+    "Digital Credentials Consortium",
+    ", a network of leading international universities designing an open infrastructure for digital academic credentials.",
+    "Why trust us?"
+  ],
+  "boton_scan": "Scan QR Code",
+  "qr_invalido": "Invalid QR code",
+  "input_label": "Paste JSON or URL",
+  "boton_verificar": "Verify",
+  "advertencia": "warning",
+  "JSON_no_parsed": "JSON cannot be parsed",
+  "drag_drop": [" Drag and drop a file here or", "browse", "Supports JSON"]
+}
