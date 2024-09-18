@@ -1,18 +1,25 @@
 {
   "titulo": "VerifierPlus Home page",
-  "introduccion": [
-    "VerifierPlus allows users to verify any ",
-    "supported",
-    "digital academic credential. This site is hosted by the ",
-    "Digital Credentials Consortium",
-    ", a network of leading international universities designing an open infrastructure for digital academic credentials.",
-    "Why trust us?"
-  ],
-  "boton_scan": "Scan QR Code",
-  "qr_invalido": "Invalid QR code",
-  "input_label": "Paste JSON or URL",
-  "boton_verificar": "Verify",
-  "advertencia": "warning",
-  "JSON_no_parsed": "JSON cannot be parsed",
-  "drag_drop": [" Drag and drop a file here or", "browse", "Supports JSON"]
+  "index_titulo": "Verifier of Credentials",
+  "index_introduccion_1": "VerifierPlus allows users to verify any ",
+  "index_introduccion_2": "supported",
+  "index_introduccion_3": "digital academic credential. This site is hosted by the ",
+  "index_introduccion_4": "Digital Credentials Consortium",
+  "index_introduccion_5": ", a network of leading international universities designing an open infrastructure for digital academic credentials.",
+  "index_introduccion_6": "Why trust us?",
+  "index_boton_scan": "Scan QR Code",
+  "index_qr_invalido": "Invalid QR code",
+  "index_input_label": "Paste JSON or URL",
+  "index_boton_verificar": "Verify",
+  "index_advertencia": "warning",
+  "index_JSON_no_parsed": "JSON cannot be parsed",
+  "index_drag_drop_1": " Drag and drop a file here or",
+  "index_drag_drop_2": "browse",
+  "index_drag_drop_3": "Supports JSON",
+
+  "bottom_terminos": "Terms and Conditions of Use",
+  "bottom_politica": "Privacy Policy",
+  "bottom_access": "Accessibility",
+  "bottom_github": "View on Github",
+  "bottom_version": "VerifierPlus Version "
 }

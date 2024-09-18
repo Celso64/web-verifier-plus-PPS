@@ -2,44 +2,13 @@
   padding-inline: 16px;
   gap: 16px;
   align-items: center;
-  padding-top: 16px;
+  padding-top: 8px;
   display: flex;
   width: 100%;
   justify-content: flex-end;
-}
-
-.hasLogoContainer {
-  padding-inline: 16px;
-  gap: 16px;
-  align-items: center;
-  /* padding-top: 16px; */
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  background-color: var(--contrast-text);
-}
-
-.loginButton {
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  min-height: 36px;
-  background: none;
-  border: none;
-  gap: 8px;
-  color: var(--dark-text);
-  font-family: Rubik, sans-serif;
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 500;
-
 }
 
 .darkmodeIcon {
-  font-size: 18px;
-}
-
-.loginIcon {
   font-size: 18px;
 }
 
@@ -51,16 +20,15 @@
   cursor: pointer;
 }
 
-.logo p {
-  flex-grow: 1;
-  font-size: 16px;
-  font-family: Rubik, sans-serif;
-  font-weight: 700;
-  color: var(--primary);
+.logo img {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+  width: var(--tam-icon);
+  height: var(--tam-icon);
 
-} 
+  transition: box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
 
-.betaTag {
-  font-size: 12px;
-  
+.logo img:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }

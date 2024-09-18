@@ -6,10 +6,9 @@ const useTranslation = (initialLanguage: string = "es") => {
   const [language, setLanguage] = useState<string>(initialLanguage);
   const [translations, setTranslations] = useState<Translations>({});
 
-  // Función para cargar el archivo de traducciones dinámicamente
   const loadTranslations = async (lang: string) => {
     try {
-      // Carga dinámica del archivo JSON según el idioma seleccionado
+      // Carga dinámica del archivo JSON según el idioma seleccionado `../locale/${lang}.json`
       const translationsModule = await import(`../locale/${lang}.json`);
       setTranslations(translationsModule.default); // Asegúrate de usar `.default`
     } catch (error) {

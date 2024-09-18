@@ -1,12 +1,14 @@
 import Link from "next/link";
 import type { BottomBarProps } from "./BottomBar.d";
 import styles from "./BottomBar.module.css";
+import useTranslation from "hooks/useTranslation";
 
 export const BottomBar = ({ isDark }: BottomBarProps) => {
+  const { translations } = useTranslation();
   const getVersionNumber = () => {
     const gitCommit = "98c0a2a";
-    const version = "0.1.0";
-    return gitCommit + " " + version;
+    const version = process.env.NEXT_PUBLIC_VERSION;
+    return gitCommit + "  v" + version;
   };
 
   return (
@@ -22,23 +24,24 @@ export const BottomBar = ({ isDark }: BottomBarProps) => {
       </div> */}
       <div className={styles.linkContainer}>
         <Link href="/terms" className={styles.link}>
-          Terms and Conditions of Use
+          {translations.bottom_terminos || "Terms and Conditions of Use"}
         </Link>
         <Link href="/privacy" className={styles.link}>
-          Privacy Policy
+          {translations.bottom_politica || "Privacy Policy"}
         </Link>
         <Link className={styles.link} href="https://accessibility.mit.edu/">
-          Accessibility
+          {translations.bottom_access || "Accessibility"}
         </Link>
         <Link
           className={styles.link}
-          href="https://github.com/digitalcredentials/web-verifier-plus"
+          href="https://github.com/Celso64/web-verifier-plus-PPS.git"
         >
-          View on Github
+          {translations.bottom_github || "View on Github"}
         </Link>
       </div>
       <p className={styles.version}>
-        VerifierPlus Version {getVersionNumber()}
+        {translations.bottom_version || "VerifierPlus Version "} +
+        {getVersionNumber()}
       </p>
     </footer>
   );

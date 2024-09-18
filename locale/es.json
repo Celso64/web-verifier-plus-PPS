@@ -1,22 +1,25 @@
 {
-  "titulo": "Verificador UNRN - Pagina Principal",
-  "introduccion": [
-    "VerifierPlus permite a los usuarios verificar cualquier ",
-    "soportado",
-    "credencial academica digital. Este sitio es hosteado por la ",
-    "Universidad Nacional de Rio Negro",
-    ", una universidad, nacional, que queda en Rio Negro.",
-    "¿Porque deberia confiar en nosotros? Porque, no hay porque"
-  ],
-  "boton_scan": "Escanear Codigo QR",
-  "qr_invalido": "Codigo QR Invalido",
-  "input_label": "Pegar JSON o URL",
-  "boton_verificar": "Verificar",
-  "advertencia": "Advertencia",
-  "JSON_no_parsed": "JSON no puede ser parseado",
-  "drag_drop": [
-    "Arrastra y suelta un archivo aqui o ",
-    "Buscar en los archivos",
-    "Soporta JSON"
-  ]
+  "titulo": "Verificador UNRN-Pagina Principal",
+  "index_titulo": "Verificador de Credenciales",
+  "index_introduccion_1": "VerifierPlus permite a los usuarios verificar cualquier credencial academica digital ",
+  "index_introduccion_2": "soportada",
+  "index_introduccion_3": ". Este sitio es hosteado por la ",
+  "index_introduccion_4": "Universidad Nacional de Rio Negro.",
+  "index_introduccion_5": "Una universidad, nacional, que queda en Rio Negro.",
+  "index_introduccion_6": "¿Porque deberia confiar en nosotros? Porque? no hay porque",
+  "index_boton_scan": "Escanear Codigo QR",
+  "index_qr_invalido": "Codigo QR Invalido",
+  "index_input_label": "Pegar JSON o URL",
+  "index_boton_verificar": "Verificar",
+  "index_advertencia": "Advertencia",
+  "index_JSON_no_parsed": "JSON no puede ser parseado",
+  "index_drag_drop_1": "Arrastra y suelta un archivo aqui o ",
+  "index_drag_drop_2": "Buscar en los archivos",
+  "index_drag_drop_3": "Soporta JSON",
+
+  "bottom_terminos": "Terminos y Condiciones de Uso",
+  "bottom_politica": "Politica de Privacidad",
+  "bottom_access": "Accesibilidad",
+  "bottom_github": "Ver en GitHub",
+  "bottom_version": "Verificador - Version "
 }

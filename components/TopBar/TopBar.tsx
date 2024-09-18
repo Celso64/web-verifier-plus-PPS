@@ -48,25 +48,19 @@ export const TopBar = ({
   };
 
   return (
-    <header
-      className={`${hasLogo ? styles.hasLogoContainer : styles.container}`}
-    >
-      {hasLogo ? (
-        <div className={styles.logo} onClick={() => clearCredential()}>
-          <div className={styles.logoContainer}>
-            <a href="https://www.unrn.edu.ar/home">
-              <img
-                src={isDark ? "/logo-unrn-dark.jpg" : "/logo-unrn-light.jpg"}
-                alt="Universidad Nacional de Rio Negro"
-                className={styles.logo}
-              />
-            </a>
-          </div>
-          <div>
-            <p>VerifierPlus</p>
-          </div>
+    <header className={styles.container}>
+      <div className={styles.logo} onClick={() => clearCredential()}>
+        <div>
+          <Link href="/">
+            <img
+              src={isDark ? "/logo-unrn-dark.jpg" : "/logo-unrn-light.jpg"}
+              alt="Universidad Nacional de Rio Negro"
+              className={styles.logo}
+            />
+          </Link>
         </div>
-      ) : null}
+      </div>
+
       <ToggleSwitch
         isOn={isDark}
         handleToggle={handleToggle}
@@ -77,10 +71,6 @@ export const TopBar = ({
           </span>
         }
       />
-      {/* <button className={styles.loginButton} type='button'>
-          <span aria-hidden className={`material-icons ${styles.loginIcon}`}> login </span>
-          Login
-        </button>*/}
     </header>
   );
 };
