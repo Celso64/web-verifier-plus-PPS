@@ -5,23 +5,9 @@ import useTranslation from "hooks/useTranslation";
 
 export const BottomBar = ({ isDark }: BottomBarProps) => {
   const { translations } = useTranslation();
-  const getVersionNumber = () => {
-    const gitCommit = "98c0a2a";
-    const version = process.env.NEXT_PUBLIC_VERSION;
-    return gitCommit + "  v" + version;
-  };
 
   return (
     <footer className={styles.container}>
-      {/* <div className={styles.logoContainer}>
-        <a href="https://www.unrn.edu.ar/home">
-          <img
-            src={isDark ? "/logo-unrn-dark.jpg" : "/logo-unrn-light.jpg"}
-            alt="Universidad Nacional de Rio Negro"
-            className={styles.logo}
-          />
-        </a>
-      </div> */}
       <div className={styles.linkContainer}>
         <Link href="/terms" className={styles.link}>
           {translations.bottom_terminos || "Terms and Conditions of Use"}
@@ -39,10 +25,6 @@ export const BottomBar = ({ isDark }: BottomBarProps) => {
           {translations.bottom_github || "View on Github"}
         </Link>
       </div>
-      <p className={styles.version}>
-        {translations.bottom_version || "VerifierPlus Version "} +
-        {getVersionNumber()}
-      </p>
     </footer>
   );
 };

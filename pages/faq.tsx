@@ -19,8 +19,10 @@ const Faq: NextPage = () => {
         <h1 className={styles.title}>
           VerifierPlus Frequently Asked Questions
         </h1>
-        <h2 id="trust">Why trust us?</h2>
-        <p className="text-always-dark">
+        <h2 id="trust" style={{ color: "#1f2937" }}>
+          Why trust us?
+        </h2>
+        <p style={{ color: "#1f2937" }}>
           The Digital Credentials Consortium is a member organization comprised
           of{" "}
           <a href="https://digitalcredentials.mit.edu/#dcc-members">
@@ -30,7 +32,7 @@ const Faq: NextPage = () => {
           infrastructure for digital academic credentials that can support the
           education systems of the future.
         </p>
-        <p>
+        <p style={{ color: "#1f2937" }}>
           This website implements{" "}
           <a href="https:/https://github.com/digitalcredentials">
             open source libraries
@@ -38,27 +40,29 @@ const Faq: NextPage = () => {
           that support open technical standards for supported digital
           credentials.
         </p>
-        <p>
+        <p style={{ color: "#1f2937" }}>
           This service is maintained by{" "}
           <a href="https://openlearning.mit.edu">MIT Open Learning</a> at the
           Massachusetts Institute of Technology. Please contact
           verifierplus-support -at- mit -dot- edu with any questions.
         </p>
 
-        <h2 id="supported">
+        <h2 id="supported" style={{ color: "#1f2937" }}>
           What formats of digital academic credentials are supported?
         </h2>
-        <p>VerifierPlus supports digital academic credentials:</p>
+        <p style={{ color: "#1f2937" }}>
+          VerifierPlus supports digital academic credentials:
+        </p>
         <ul>
           <li>Using the W3C Verifiable Credential Data Model v1.1.</li>
           <li>Expressed as Open Badges v3</li>
         </ul>
 
-        <p>
+        <p style={{ color: "#1f2937" }}>
           In addition, credentials must support the following standards and
           specifications for full verification:
         </p>
-        <ul>
+        <ul style={{ color: "#1f2937" }}>
           <li>The issuer must exist in a supported registry.</li>
           <li>
             The issuer and subject decentralized identifiers must be either
@@ -67,8 +71,8 @@ const Faq: NextPage = () => {
           <li>The appropriate cryptographic signing method must be used</li>
         </ul>
 
-        <h2>What is a {"Public Link"}?</h2>
-        <p>
+        <h2 style={{ color: "#1f2937" }}>What is a {"Public Link"}?</h2>
+        <p style={{ color: "#1f2937" }}>
           Users of the Learner Credential Wallet mobile app are able to “
           <a href="https://lcw.app/faq.html#public-link">Create Public Links</a>
           ” if they wish to share a credential from their wallet to anyone with
@@ -77,12 +81,14 @@ const Faq: NextPage = () => {
           for more information.
         </p>
 
-        <h2>Who do I contact if I have more questions?</h2>
-        <p>
+        <h2 style={{ color: "#1f2937" }}>
+          Who do I contact if I have more questions?
+        </h2>
+        <p style={{ color: "#1f2937" }}>
           For questions about the VerifierPlus please email verifierplus-support
           -at- mit -dot- edu.
         </p>
-        <p>
+        <p style={{ color: "#1f2937" }}>
           To learn more about the DCC please visit us at{" "}
           <a href="https://digitalcredentials.mit.edu">
             digitalcredentials.mit.edu
