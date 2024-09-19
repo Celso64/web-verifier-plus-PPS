@@ -21,7 +21,7 @@ services:
       # - HEALTH_CHECK_SERVICE_URL=http://localhost:3000/api/healthz - the healthz endpoint
       # - HEALTH_CHECK_SERVICE_NAME=VERIFIER-PLUS
     healthcheck:
-      test: ["CMD", "node", "healthcheck.mjs"]
+      test: [ "CMD", "node", "healthcheck.mjs" ]
       interval: 30m
       retries: 3
       start_period: 30s
@@ -30,6 +30,11 @@ services:
       - "3010:3000"
     labels:
       autoheal: true
+    volumes:
+      - ./:/usr/src/app
+    depends_on:
+      - mongo
+
   autoheal:
     image: willfarrell/autoheal:latest
     restart: always

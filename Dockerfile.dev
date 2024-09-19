@@ -8,7 +8,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN npm install --legacy-peer-deps 
 
-COPY . .
+COPY . /usr/src/app
 
 #COPY healthcheck.js /usr/src/app/healthcheck.js
 
