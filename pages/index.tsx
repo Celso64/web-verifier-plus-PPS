@@ -235,7 +235,9 @@ const Home: NextPage = () => {
 
         {scanError && (
           <div className={styles.errorContainer}>
-            <span className="material-icons-outlined">warning</span>
+            <span className="material-icons-outlined">
+              {translations.index_advertencia}
+            </span>
             <p className={styles.error}>{translations.index_qr_invalido}</p>
           </div>
         )}
@@ -262,7 +264,9 @@ const Home: NextPage = () => {
 
         {textAreaError && (
           <div className={styles.errorContainer}>
-            <span className="material-icons-outlined">warning</span>
+            <span className="material-icons-outlined">
+              {translations.index_advertencia}
+            </span>
             <p className={styles.error}>{translations.index_JSON_no_parsed}</p>
           </div>
         )}
@@ -290,7 +294,9 @@ const Home: NextPage = () => {
 
         {fileError && (
           <div className={styles.errorContainer}>
-            <span className="material-icons-outlined">warning</span>
+            <span className="material-icons-outlined">
+              {translations.index_advertencia}
+            </span>
             <p className={styles.error}>Json cannot be parsed</p>
           </div>
         )}
