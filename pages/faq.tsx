@@ -14,90 +14,79 @@ const Faq: NextPage = () => {
 
   return (
     <main className={styles.main}>
-      <TopBar hasLogo={true} isDark={isDark} setIsDark={setIsDark} />
-      <div className={styles.textContent}>
-        <h1 className={styles.title}>
-          VerifierPlus Frequently Asked Questions
-        </h1>
-        <h2 id="trust" style={{ color: "#1f2937" }}>
-          Why trust us?
-        </h2>
-        <p style={{ color: "#1f2937" }}>
-          The Digital Credentials Consortium is a member organization comprised
-          of{" "}
-          <a href="https://digitalcredentials.mit.edu/#dcc-members">
-            leading universities
-          </a>{" "}
-          in North America and Europe that are working together to create an
-          infrastructure for digital academic credentials that can support the
-          education systems of the future.
-        </p>
-        <p style={{ color: "#1f2937" }}>
-          This website implements{" "}
-          <a href="https:/https://github.com/digitalcredentials">
-            open source libraries
-          </a>{" "}
-          that support open technical standards for supported digital
-          credentials.
-        </p>
-        <p style={{ color: "#1f2937" }}>
-          This service is maintained by{" "}
-          <a href="https://openlearning.mit.edu">MIT Open Learning</a> at the
-          Massachusetts Institute of Technology. Please contact
-          verifierplus-support -at- mit -dot- edu with any questions.
-        </p>
+  <TopBar hasLogo={true} isDark={isDark} setIsDark={setIsDark} />
+  <div className={styles.textContent}>
+    <h1 className={styles.title}>
+      {translations.faq_title}
+    </h1>
+    <h2 id="trust" style={{ color: "#1f2937" }}>
+      {translations.faq_subtitle_1}
+    </h2>
+    <p style={{ color: "#1f2937" }}>
+      {translations.faq_1}{" "}
+      <a href="https://digitalcredentials.mit.edu/#dcc-members">
+        leading universities
+      </a>{" "}
+      {translations.faq_2}
+    </p>
+    <p style={{ color: "#1f2937" }}>
+      {translations.faq_3}{" "}
+      <a href="https://github.com/digitalcredentials">
+        open source libraries
+      </a>{" "}
+      {translations.faq_4}
+    </p>
+    <p style={{ color: "#1f2937" }}>
+      {translations.faq_5}{" "}
+      <a href="https://openlearning.mit.edu">MIT Open Learning</a> {translations.faq_6}
+    </p>
 
-        <h2 id="supported" style={{ color: "#1f2937" }}>
-          What formats of digital academic credentials are supported?
-        </h2>
-        <p style={{ color: "#1f2937" }}>
-          VerifierPlus supports digital academic credentials:
-        </p>
-        <ul>
-          <li>Using the W3C Verifiable Credential Data Model v1.1.</li>
-          <li>Expressed as Open Badges v3</li>
-        </ul>
+    <h2 id="supported" style={{ color: "#1f2937" }}>
+      {translations.faq_subtitle_2}
+    </h2>
+    <p style={{ color: "#1f2937" }}>
+      {translations.faq_7}
+    </p>
+    <ul>
+      <li>{translations.faq_8}</li>
+      <li>{translations.faq_9}</li>
+    </ul>
 
-        <p style={{ color: "#1f2937" }}>
-          In addition, credentials must support the following standards and
-          specifications for full verification:
-        </p>
-        <ul style={{ color: "#1f2937" }}>
-          <li>The issuer must exist in a supported registry.</li>
-          <li>
-            The issuer and subject decentralized identifiers must be either
-            did:key or did:web
-          </li>
-          <li>The appropriate cryptographic signing method must be used</li>
-        </ul>
+    <p style={{ color: "#1f2937" }}>
+      {translations.faq_10}
+    </p>
+    <ul style={{ color: "#1f2937" }}>
+      <li>{translations.faq_11}</li>
+      <li>{translations.faq_12}</li>
+      <li>{translations.faq_13}</li>
+    </ul>
 
-        <h2 style={{ color: "#1f2937" }}>What is a {"Public Link"}?</h2>
-        <p style={{ color: "#1f2937" }}>
-          Users of the Learner Credential Wallet mobile app are able to “
-          <a href="https://lcw.app/faq.html#public-link">Create Public Links</a>
-          ” if they wish to share a credential from their wallet to anyone with
-          the link. Please see the{" "}
-          <a href="https://lcw.app/faq.html">Learner Credential Wallet FAQ</a>{" "}
-          for more information.
-        </p>
+    <h2 style={{ color: "#1f2937" }}>
+      {translations.faq_subtitle_3}
+    </h2>
+    <p style={{ color: "#1f2937" }}>
+      {translations.faq_14}{" "}
+      <a href="https://lcw.app/faq.html#public-link">Create Public Links</a>{" "}
+      {translations.faq_15}
+    </p>
 
-        <h2 style={{ color: "#1f2937" }}>
-          Who do I contact if I have more questions?
-        </h2>
-        <p style={{ color: "#1f2937" }}>
-          For questions about the VerifierPlus please email verifierplus-support
-          -at- mit -dot- edu.
-        </p>
-        <p style={{ color: "#1f2937" }}>
-          To learn more about the DCC please visit us at{" "}
-          <a href="https://digitalcredentials.mit.edu">
-            digitalcredentials.mit.edu
-          </a>
-          .
-        </p>
-      </div>
-      <BottomBar isDark={isDark} />
-    </main>
+    <h2 style={{ color: "#1f2937" }}>
+      {translations.faq_subtitle_4}
+    </h2>
+    <p style={{ color: "#1f2937" }}>
+      {translations.faq_16}
+    </p>
+    <p style={{ color: "#1f2937" }}>
+      {translations.faq_17}{" "}
+      <a href="https://digitalcredentials.mit.edu">
+        digitalcredentials.mit.edu
+      </a>
+      .
+    </p>
+  </div>
+  <BottomBar isDark={isDark} />
+</main>
+
   );
 };
 
