@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
 import { Button } from "components/Button/Button";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ScanModal } from "components/ScanModal/ScanModal";
 import { CredentialCard } from "components/CredentialCard/CredentialCard";
 import { Container } from "components/Container/Container";
@@ -15,6 +15,7 @@ import { BottomBar } from "components/BottomBar/BottomBar";
 import { extractCredentialsFrom, VerifiableObject } from "lib/verifiableObject";
 import Link from "next/link";
 import useTranslation from "hooks/useTranslation";
+import { TraduccionContexto, useTraduccion } from "hooks/useTranslationContext";
 
 // NOTE: We currently only support one credential at a time. If a presentation with more than one credential
 // is dropped, pasted, or scanned we only look at the first one
@@ -32,12 +33,13 @@ const Home: NextPage = () => {
   >(undefined);
   const credentialContext = useVerification(credential);
   const [wasMulti, setWasMulti] = useState(false);
-  const { translations } = useTranslation();
+
+  const { translations } = useTraduccion();
 
   useEffect(() => {
     document.documentElement.lang = "es";
-    document.title = translations.titulo
-      ? translations.titulo
+    document.title = translations?.titulo
+      ? translations?.titulo
       : "VerifierPlus Home page";
     const handlePopstate = () => {
       if (window.location.hash === "/") {
@@ -206,22 +208,22 @@ const Home: NextPage = () => {
       />
       <div className={styles.contentContainer}>
         <div>
-          <h1 className={styles.title}>{translations.index_titulo}</h1>
+          <h1 className={styles.title}>{translations?.index_titulo}</h1>
         </div>
         <div>
           <p className={styles.descriptionBlock}>
-            {translations.index_introduccion_1}
+            {translations?.index_introduccion_1}
             <Link href="faq#supported">
-              {translations.index_introduccion_2 ||
+              {translations?.index_introduccion_2 ||
                 "No hay translations.introduccion_2"}
             </Link>
-            {translations.index_introduccion_3}
+            {translations?.index_introduccion_3}
             <a href="https://www.unrn.edu.ar/home">
-              {translations.index_introduccion_4}
+              {translations?.index_introduccion_4}
             </a>
-            {translations.introduccion_5}
+            {translations?.introduccion_5}
             <Link href="faq#trust">
-              {translations.index_introduccion_6 ||
+              {translations?.index_introduccion_6 ||
                 "No hay translations.introduccion_6"}
             </Link>
           </p>
@@ -229,16 +231,16 @@ const Home: NextPage = () => {
         <Button
           icon={<span className="material-icons">qr_code_scanner</span>}
           className={styles.scan}
-          text={translations.index_boton_scan}
+          text={translations?.index_boton_scan}
           onClick={ScanButtonOnClick}
         />
 
         {scanError && (
           <div className={styles.errorContainer}>
             <span className="material-icons-outlined">
-              {translations.index_advertencia}
+              {translations?.index_advertencia}
             </span>
-            <p className={styles.error}>{translations.index_qr_invalido}</p>
+            <p className={styles.error}>{translations?.index_qr_invalido}</p>
           </div>
         )}
 
@@ -252,12 +254,12 @@ const Home: NextPage = () => {
               id="textarea"
             />
             <label id="textarea-label" htmlFor="textarea">
-              {translations.index_input_label}
+              {translations?.index_input_label}
             </label>
           </div>
           <Button
             className={styles.verifyTextArea}
-            text={translations.index_boton_verificar}
+            text={translations?.index_boton_verificar}
             onClick={verifyTextArea}
           />
         </div>
@@ -265,9 +267,9 @@ const Home: NextPage = () => {
         {textAreaError && (
           <div className={styles.errorContainer}>
             <span className="material-icons-outlined">
-              {translations.index_advertencia}
+              {translations?.index_advertencia}
             </span>
-            <p className={styles.error}>{translations.index_JSON_no_parsed}</p>
+            <p className={styles.error}>{translations?.index_JSON_no_parsed}</p>
           </div>
         )}
 
@@ -279,23 +281,23 @@ const Home: NextPage = () => {
           }}
         >
           <div className={styles.dndUploadText}>
-            {translations.index_drag_drop_1}
+            {translations?.index_drag_drop_1}
             <label className={styles.fileUpload}>
               <input type="file" onChange={handleBrowse} />
               <span className={styles.browseLink}>
-                {translations.index_drag_drop_2}
+                {translations?.index_drag_drop_2}
               </span>
             </label>
           </div>
           <span className={styles.supportText}>
-            {translations.index_drag_drop_3}
+            {translations?.index_drag_drop_3}
           </span>
         </div>
 
         {fileError && (
           <div className={styles.errorContainer}>
             <span className="material-icons-outlined">
-              {translations.index_advertencia}
+              {translations?.index_advertencia}
             </span>
             <p className={styles.error}>Json cannot be parsed</p>
           </div>
