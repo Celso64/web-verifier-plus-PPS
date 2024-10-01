@@ -3,9 +3,13 @@ import styles from "./infopages.module.css";
 import { BottomBar } from "components/BottomBar/BottomBar";
 import { TopBar } from "components/TopBar/TopBar";
 import { useEffect, useState } from "react";
+import { useTraduccion } from "hooks/useTranslationContext";
 
 const Faq: NextPage = () => {
   const [isDark, setIsDark] = useState(false);
+  
+  const { translations } = useTraduccion();
+
 
   useEffect(() => {
     document.documentElement.lang = "en";
