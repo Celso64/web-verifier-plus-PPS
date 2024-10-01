@@ -3,6 +3,7 @@ import { ToggleSwitch } from "components/ToggleSwitch/ToggleSwitch";
 import Link from "next/link";
 import { useCallback, useEffect } from "react";
 import styles from "./TopBar.module.css";
+import { useTraduccion } from "hooks/useTranslationContext";
 
 export const TopBar = ({
   hasLogo = false,
@@ -15,6 +16,8 @@ export const TopBar = ({
     localStorage.setItem("darkMode", "true");
     setIsDark(true);
   }, [setIsDark]);
+
+  const { language, setLanguage, translations } = useTraduccion();
 
   // get local storage value for darkmode on mount
   useEffect(() => {
@@ -41,6 +44,10 @@ export const TopBar = ({
     }
   };
 
+  const handleLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setLanguage(e.target.value);
+  };
+
   const clearCredential = () => {
     if (setCredential) {
       setCredential(undefined);
@@ -60,6 +67,16 @@ export const TopBar = ({
           </Link>
         </div>
       </div>
+
+      <select
+        name="lang"
+        id="lang"
+        onChange={handleLanguage}
+        defaultValue={language}
+      >
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
 
       <ToggleSwitch
         isOn={isDark}
