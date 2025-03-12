@@ -231,7 +231,7 @@ const Home: NextPage = () => {
         <Button
           icon={<span className="material-icons">qr_code_scanner</span>}
           className={styles.scan}
-          text={translations?.index_boton_scan}
+          text={translations?.index_boton_scan || ""}
           onClick={ScanButtonOnClick}
         />
 
@@ -259,7 +259,7 @@ const Home: NextPage = () => {
           </div>
           <Button
             className={styles.verifyTextArea}
-            text={translations?.index_boton_verificar}
+            text={translations?.index_boton_verificar || ""}
             onClick={verifyTextArea}
           />
         </div>

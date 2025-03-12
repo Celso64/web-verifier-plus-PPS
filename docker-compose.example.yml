@@ -1,4 +1,4 @@
-version: "3.7"
+
 # Los valores como ${DB_USER} se leen del .env
 services:
   web-verifier-plus:
